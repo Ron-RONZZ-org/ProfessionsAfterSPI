@@ -1,0 +1,56 @@
+terminologio.eo = "Instruisto-Esplorist(in)o"
+
+difino.eo = """
+## Superrigardo
+
+- Kombinas universitatan instruadon kun scienca esplorado
+- Laboras en publika universitato aŭ granda ŝkolo (Grande École)
+- Apartenas al laboratorio de esplorado (CNRS, INRAE, ktp.)
+- Estas ŝtata funkciulo (fonctionnaire d'État) laŭ la franca publika servo
+
+## Necesaj kapabloj
+
+- Doktortitolo en la koncerna scienca kampo (bac+8)
+- Rigora scienca metodologio kaj kritika pensado
+- Pedagogiaj kapabloj por diverse klerigitaj aŭskultantaroj
+- Flueco en scienca angla lingvo (publikaĵoj, konferencoj)
+- Kapablo gvidi esplorteamon kaj doktoriĝontojn
+- Projekta administrado (subvencioj ANR, H2020, industriaj partnerecoj)
+
+## Ĉiutaga tago
+
+- Preparado kaj prezentado de prelegoj (kursoj magistralaj, sesioj de TL/TD)
+- Laboratorio-laboro aŭ komputila modeligado
+- Legado de sciencaj artikoloj kaj aktualigo de bibliografio
+- Gvidado de doktoriĝontoj kaj staĝistoj
+- Redaktado de sciencaj artikoloj kaj projektaj petoj
+- Partopreno en universitataj konsiloj kaj komisionoj
+
+## Kariera vojo
+
+- Licence SPI (bac+3)
+- Master de esplorado (bac+5)
+- Doktoriĝo – 3 jaroj (bac+8)
+- Post-doktora esplorado aŭ ATER-kontrakto
+- Nomumado kiel Maître·sse de Conférences (MCF) post nacia qualifikado (CNU)
+- Eble promocio al Profesoro de Universitato (PR) per nova konkurso
+
+## Salajro (Francio, 2024)
+
+- Doktoriĝonto (kontrakto): ≈ 2 100 € brute/monat
+- ATER: ≈ 2 300 € brute/monat
+- MCF (komencante): 2 800 – 3 500 € brute/monat
+- Profesoro de Universitato: 3 500 – 6 500 € brute/monat
+
+## Fortoj kaj malfortoj
+
+- Fortoj: intelekta libero, konstanta stimulado, ampleksa socia impakto
+- Malfortoj: fortega konkurenco pri postenoj, post-doktora malstabileco, administra ŝarĝo
+"""
+
+fonto = [
+  {titolo="ONISEP — Enseignant-chercheur / Enseignante-chercheuse", autoro="ONISEP", jaro=2024, tipo="retejoj", ligilo="https://www.onisep.fr/ressources/univers-metier/metiers/enseignant-chercheur-enseignante-chercheuse"},
+  {titolo="Rémunération des enseignants-chercheurs", autoro="Ministère de l'Enseignement supérieur et de la Recherche", jaro=2024, tipo="retejoj", ligilo="https://sup-recherche.org/votre-statut/remuneration/"},
+  {titolo="Statut des enseignants-chercheurs (décret n°84-431)", autoro="Légifrance", jaro=2023, tipo="raportoj", ligilo="https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000702043/"},
+  {titolo="Devenir enseignant-chercheur", autoro="Université de France", jaro=2023, tipo="retejoj", ligilo="https://www.univ-france.fr/"}
+].

@@ -1,0 +1,55 @@
+terminologio.eo = "Lernejestro-Instruisto(ino) de Bazlernejo"
+
+difino.eo = """
+## Superrigardo
+
+- Instruas ĉiujn bazajn lernobjektojn en elementa lernejo (aĝo 3–11 jaroj)
+- Laboras en publika aŭ privata lernejo laŭ la franca eduka sistemo
+- Estas ŝtata funkciulo (fonctionnaire) nomumita de la Nacia Edukado (Éducation Nationale)
+- Akceptas ĉiujn lernobezonojn de sia klaso, inkluzive de lernantoj kun specialaj bezonoj
+
+## Necesaj kapabloj
+
+- Pacienco, afableco kaj pedagogia empatia
+- Majstrado de didaktiko de la fundamentaj disciplinoj (legado, skribo, matematiko, sciencoj)
+- Kapablo diferencigi la instruadon laŭ la lernantaj bezonoj
+- Administrado de klasa grupo kaj de konfliktoj
+- Majstrado de cifereca edukado (tablojdo, LMS, interretaj rimedoj)
+- Bonaj komunikado-kapabloj kun gepatroj kaj kun la profesia teamo
+
+## Ĉiutaga tago
+
+- Akceptado de lernantoj kaj organizado de la klaso
+- Instruosekvencoj (francan lingvon, matematikon, sciencojn, artojn ktp.)
+- Tagmeza observado dum la paŭzo
+- Posttagmeza laboro: eksperi-bazitaj lernadsesioj
+- Preparo de lecionoj, korektado de lernotaĵoj
+- Partopreno en konsilsidoj kaj renkontiĝoj kun gepatroj
+
+## Kariera vojo
+
+- Licence SPI (bac+3)
+- Master MEEF — Métiers de l'Enseignement, de l'Éducation et de la Formation (bac+5)
+- Ekzameno CRPE (Concours de Recrutement de Professeur·es des Écoles)
+- Staĝa jaro en la INSPE (Instituts Nationaux Supérieurs du Professorat et de l'Éducation)
+- Titulado kiel Professeur·e des Écoles
+- Eblaj evoluoj: direktoro/direktrino de lernejo, pedagogia konsilisto, IEN-inspektoro, formisto
+
+## Salajro (Francio, 2024)
+
+- Staĝa jaro: ≈ 1 900 € nete/monat
+- Komenco de kariero (normala klaso): 2 100 – 2 400 € nete/monat
+- Supra klaso / escepta klaso: 2 600 – 3 200 € nete/monat
+
+## Fortoj kaj malfortoj
+
+- Fortoj: stabila statuso (fonctionnaire), profunda rilato kun lernantoj, ŝanĝo de la vivo de infanoj
+- Malfortoj: ŝarĝo de preparo ekster la klaso, malfacileco de administrado de kondutoj, deviga nomuma sistemo kun geografiaj moviĝoj
+"""
+
+fonto = [
+  {titolo="ONISEP — Professeur des écoles", autoro="ONISEP", jaro=2024, tipo="retejoj", ligilo="https://www.onisep.fr/ressources/univers-metier/metiers/professeur-des-ecoles-professeure-des-ecoles"},
+  {titolo="Devenir professeur des écoles — CRPE", autoro="Ministère de l'Éducation Nationale", jaro=2024, tipo="retejoj", ligilo="https://www.education.gouv.fr/devenir-enseignant/devenir-professeur-des-ecoles"},
+  {titolo="Grilles de rémunération des PE", autoro="Ministère de l'Éducation Nationale", jaro=2024, tipo="raportoj", ligilo="https://www.education.gouv.fr/les-personnels-de-l-education-nationale/les-remunerations-2023"},
+  {titolo="Master MEEF — présentation nationale", autoro="Institut National Supérieur du Professorat et de l'Éducation", jaro=2023, tipo="retejoj", ligilo="https://www.inspe-paris.fr/formations/master-meef/"}
+].
