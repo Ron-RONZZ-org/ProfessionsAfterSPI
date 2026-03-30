@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Métiers après Licence SPI — Présentation</title>
+
+  <!-- Reveal.js (jsDelivr CDN) -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reset.css" />
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css" />
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css"
+        id="theme" />
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/monokai.css" />
+
+  <style>
+    :root {
+      --color-ec:   #1a7abf;
+      --color-pe:   #c77c00;
+      --color-ip:   #2e8b57;
+      --color-dark: #2c2c2c;
+      --color-muted: #666;
+    }
+
+    .reveal .slides section {
+      text-align: left;
+    }
+
+    /* ── Title slide ── */
+    .slide-title {
+      text-align: center !important;
+    }
+    .slide-title h1 {
+      font-size: 1.7em;
+      color: var(--color-dark);
+      line-height: 1.2;
+    }
+    .slide-title .subtitle {
+      font-size: 1em;
+      color: var(--color-muted);
+      margin-top: 0.5em;
+    }
+    .slide-title .badge {
+      display: inline-block;
+      background: #eef3ff;
+      border: 1px solid #aac;
+      border-radius: 6px;
+      padding: 0.15em 0.6em;
+      font-size: 0.7em;
+      margin-top: 1em;
+      color: #445;
+    }
+
+    /* ── Section intro ── */
+    .section-intro {
+      text-align: center !important;
+    }
+    .section-intro h2 {
+      font-size: 1.6em;
+    }
+    .section-intro .role-badge {
+      display: inline-block;
+      padding: 0.3em 0.8em;
+      border-radius: 8px;
+      font-size: 0.95em;
+      font-weight: bold;
+      margin-top: 0.5em;
+      color: #fff;
+    }
+    .ec-color   { background: var(--color-ec); }
+    .pe-color   { background: var(--color-pe); }
+    .ip-color   { background: var(--color-ip); }
+
+    /* ── Two-column layout ── */
+    .cols {
+      display: flex;
+      gap: 1.4em;
+      align-items: flex-start;
+    }
+    .col { flex: 1; }
+
+    /* ── Highlight boxes ── */
+    .box {
+      border-left: 4px solid #ccc;
+      padding: 0.5em 0.8em;
+      margin: 0.4em 0;
+      background: #f8f8f8;
+      border-radius: 0 6px 6px 0;
+      font-size: 0.78em;
+    }
+    .box-ec  { border-left-color: var(--color-ec); }
+    .box-pe  { border-left-color: var(--color-pe); }
+    .box-ip  { border-left-color: var(--color-ip); }
+    .box-pos { border-left-color: #2e8b57; background: #f0fff4; }
+    .box-neg { border-left-color: #c0392b; background: #fff5f5; }
+
+    /* ── Salary table ── */
+    .salary-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.78em;
+      margin-top: 0.5em;
+    }
+    .salary-table th {
+      background: #f0f0f0;
+      padding: 0.4em 0.6em;
+      text-align: left;
+      font-weight: 600;
+    }
+    .salary-table td {
+      padding: 0.35em 0.6em;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .salary-table tr:last-child td { border-bottom: none; }
+
+    /* ── PlantUML diagrams ── */
+    .diagram {
+      text-align: center;
+      margin: 0.5em 0;
+    }
+    .diagram img {
+      max-height: 320px;
+      max-width: 100%;
+    }
+
+    /* ── Overview cards (slide 2) ── */
+    .overview-cards {
+      display: flex;
+      gap: 1em;
+      justify-content: center;
+      margin-top: 0.6em;
+    }
+    .ov-card {
+      flex: 1;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 0.7em 0.8em;
+      text-align: center;
+      font-size: 0.75em;
+    }
+    .ov-card h3 {
+      margin: 0 0 0.4em;
+      font-size: 1em;
+    }
+    .ov-card.ec { border-color: var(--color-ec); }
+    .ov-card.pe { border-color: var(--color-pe); }
+    .ov-card.ip { border-color: var(--color-ip); }
+
+    /* ── Comparison table ── */
+    .cmp-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.72em;
+    }
+    .cmp-table th {
+      padding: 0.4em 0.5em;
+      background: #f0f0f0;
+      text-align: left;
+    }
+    .cmp-table td {
+      padding: 0.35em 0.5em;
+      border-bottom: 1px solid #e8e8e8;
+      vertical-align: top;
+    }
+    .cmp-table tr:last-child td { border-bottom: none; }
+
+    /* ── Timeline ── */
+    .timeline { font-size: 0.78em; }
+    .tl-item { display: flex; gap: 0.8em; margin: 0.3em 0; align-items: flex-start; }
+    .tl-time {
+      min-width: 5em;
+      font-weight: 600;
+      color: #555;
+      padding-top: 0.05em;
+    }
+    .tl-text { flex: 1; }
+
+    h2 { font-size: 1.25em; margin-bottom: 0.4em; }
+    h3 { font-size: 1em; margin: 0.4em 0 0.2em; }
+    ul  { margin: 0.2em 0; padding-left: 1.2em; }
+    li  { margin-bottom: 0.2em; font-size: 0.82em; }
+
+    .reveal h2.section-tag {
+      font-size: 0.65em;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-muted);
+      margin-bottom: 0.1em;
+    }
+
+    .note { font-size: 0.65em; color: var(--color-muted); font-style: italic; margin-top: 0.4em; }
+  </style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ═══════════════════════════════════════════════════════
+     Slide 1 — Title
+     ═══════════════════════════════════════════════════════ -->
+<section class="slide-title">
+  <h1>Après la licence SPI</h1>
+  <p class="subtitle">Trois métiers pour enseigner, former et transmettre</p>
+  <div style="margin-top:1.2em; display:flex; justify-content:center; gap:0.8em; flex-wrap:wrap;">
+    <span class="role-badge ec-color">Enseignant·e-chercheur·euse</span>
+    <span class="role-badge pe-color">Professeur·e des écoles</span>
+    <span class="role-badge ip-color">Ingénieur·e pédagogique</span>
+  </div>
+  <p class="badge">Licence Science pour l'Ingénieur (Bac+3)</p>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     Slide 2 — Vue d'ensemble + diagramme
+     ═══════════════════════════════════════════════════════ -->
+<section>
+  <h2>Trois voies après la licence SPI</h2>
+
+  <div class="diagram">
+    <img
+      src="https://img.plantuml.biz/plantuml/png/XP6nQiCm48PtFuL8bfQG8QHkumubTYo1eG53LY-gV755d5DwaYdqZVm4tUiNgvoqnkbIn0tI_t_tYxkrTP9SSwm3Uz1uaYIFx4MgGqMcmN9ZQaDiAkB-Z1mnaNd_4SCm72a4oaciQaWCbK3_UFu6yPMu4-d8Mi9UDhKJ1jrEVm1RB8DWmDdaMIj01MoNPmNU-7QpvUs4ITi_i6dCqtknk08uMj0LIdHVdr3WNBq2-Mh8NniBPvPlF1gb8X5ZCYUp1silrW9BiAnhbQd1dg6S-p55_26wWZAikXRrBtJgsb9Mfj9lpIKgo_lXfacw2eB-o_FvKn__oBRIEY0sOwbHpf1qW-o31ddBkHW4tsiGh4zIMjRQTcsm1YpzWhy1"
+      alt="Diagramme des trois parcours après licence SPI"
+    />
+  </div>
+
+  <div class="overview-cards">
+    <div class="ov-card ec">
+      <h3 style="color:var(--color-ec)">Enseignant·e-chercheur·euse</h3>
+      <p>Recherche + enseignement<br/>universitaire</p>
+      <p><strong>Bac+8</strong> (Doctorat)</p>
+    </div>
+    <div class="ov-card pe">
+      <h3 style="color:var(--color-pe)">Professeur·e des écoles</h3>
+      <p>Enseignement<br/>primaire (CP → CM2)</p>
+      <p><strong>Bac+5</strong> (Master MEEF)</p>
+    </div>
+    <div class="ov-card ip">
+      <h3 style="color:var(--color-ip)">Ingénieur·e pédagogique</h3>
+      <p>Conception de formations<br/>et e-learning</p>
+      <p><strong>Bac+5</strong> (Master spécialisé)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     BLOC 1 : Enseignant·e-chercheur·euse
+     ══════════════════════════════════════════ -->
+
+<!-- Slide 3 — EC : présentation & compétences -->
+<section>
+  <h2 class="section-tag" style="color:var(--color-ec)">Enseignant·e-chercheur·euse</h2>
+  <h2>Profil et compétences</h2>
+
+  <div class="cols">
+    <div class="col">
+      <h3>Le métier</h3>
+      <ul>
+        <li>Enseigne en master / licence dans une université ou grande école</li>
+        <li>Mène des travaux de recherche originaux</li>
+        <li>Publie des articles scientifiques et participe à des conférences</li>
+        <li>Encadre des étudiant·es (stage, mémoire, thèse)</li>
+        <li>Contribue à la vie institutionnelle (conseil, jury, comités)</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>Compétences requises</h3>
+      <ul>
+        <li>Rigueur scientifique et esprit critique</li>
+        <li>Pédagogie et clarté à l'oral comme à l'écrit</li>
+        <li>Autonomie et curiosité intellectuelle</li>
+        <li>Maîtrise de l'anglais scientifique</li>
+        <li>Gestion de projets de recherche</li>
+        <li>Animation d'équipe et collaboration interdisciplinaire</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Slide 4 — EC : parcours -->
+<section>
+  <h2 class="section-tag" style="color:var(--color-ec)">Enseignant·e-chercheur·euse</h2>
+  <h2>Parcours type</h2>
+
+  <div class="diagram">
+    <img
+      src="https://img.plantuml.biz/plantuml/png/LP71QiCm343l_WhHN3P66UsMhRcC9d42WmR2kdw0vwXTQ6eFsTbWVzJBhhqtFpOdxY7561dfFIJXfR62R7jecDdNwakGEC27aFiTwLPLgMuqGP37_HaHCP7-kHJ3C1nLAjoAjh6vLdPT_oBCvemHIYlKha6Oh6g9IYAiorUuIOIyUxYTW32mWY3E-5C-6yE5C1O9NEOJoLrlXDued17nFCd71jVIQXBMamjFShT0b3r7LsIfZPrMMi8znE_Psm2MFHdpX2-kf-Z-BE7vP0owzK1gjUsErAzX_2Gf17oUFFBigW7fBJgbfVEfzmoqglv6ChNjZbuiDn0imdIMHOojO3fzWO8LG-IC3x7ahFIl8cMkpv3Ri2MgodtPFm00"
+      alt="Parcours enseignant·e-chercheur·euse"
+    />
+  </div>
+
+  <div class="box box-ec" style="margin-top:0.5em">
+    <strong>Durée totale :</strong> environ 10 à 12 ans après le bac (Licence → Master → Doctorat → Post-doc → MCF).<br/>
+    Des contrats ATER permettent d'enseigner pendant le doctorat ou l'après-doctorat.
+  </div>
+</section>
+
+<!-- Slide 5 — EC : journée type -->
+<section>
+  <h2 class="section-tag" style="color:var(--color-ec)">Enseignant·e-chercheur·euse</h2>
+  <h2>Une journée type</h2>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <span class="tl-time">08h30</span>
+      <span class="tl-text">Lecture d'articles scientifiques, suivi de la littérature</span>
+    </div>
+    <div class="tl-item">
+      <span class="tl-time">10h00</span>
+      <span class="tl-text">Cours magistral ou TD en amphithéâtre (mécanique, physique appliquée…)</span>
+    </div>
+    <div class="tl-item">
+      <span class="tl-time">12h30</span>
+      <span class="tl-text">Déjeuner — souvent avec des collègues du laboratoire</span>
+    </div>
+    <div class="tl-item">
+      <span class="tl-time">14h00</span>
+      <span class="tl-text">Réunion d'équipe de recherche ou point avec un·e doctorant·e</span>
+    </div>
+    <div class="tl-item">
+      <span class="tl-time">15h30</span>
+      <span class="tl-text">Rédaction d'un article ou d'un projet ANR / H2020</span>
+    </div>
+    <div class="tl-item">
+      <span class="tl-time">17h30</span>
+      <span class="tl-text">Correction de copies, réponses aux mails étudiants</span>
+    </div>
+  </div>
+
+  <div class="cols" style="margin-top:0.5em">
+    <div class="col">
+      <div class="box box-pos">
+        <strong>✔ Points forts</strong><br/>
+        Liberté intellectuelle · Stimulation permanente · Impact sur la société
+      </div>
+    </div>
+    <div class="col">
+      <div class="box box-neg">
+        <strong>✖ Points faibles</strong><br/>
+        Compétition forte pour les postes · Charge administrative · Précarité post-doc
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Slide 6 — EC : rémunération & évolutions -->
+<section>
+  <h2 class="section-tag" style="color:var(--color-ec)">Enseignant·e-chercheur·euse</h2>
+  <h2>Rémunération &amp; évolutions</h2>
+
+  <table class="salary-table">
+    <thead>
+      <tr>
+        <th>Statut</th>
+        <th>Salaire brut mensuel</th>
+        <th>Remarques</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Doctorant·e (contrat doctoral)</td>
+        <td>≈ 2 100 €</td>
+        <td>Financement public ou privé</td>
+      </tr>
+      <tr>
+        <td>ATER (post-doc enseignant)</td>
+        <td>≈ 2 300 €</td>
+        <td>CDD 1 an renouvelable une fois</td>
+      </tr>
+      <tr>
+        <td>Maître·sse de conférences (MCF)</td>
+        <td>2 800 – 4 500 €</td>
+        <td>Fonctionnaire, 192h TD/an</td>
+      </tr>
+      <tr>
+        <td>Professeur·e des universités (PR)</td>
+        <td>3 500 – 6 500 €</td>
+        <td>Par concours national (qualification CNU)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 style="margin-top:0.6em">Évolutions possibles</h3>
+  <ul>
+    <li>Direction d'un laboratoire de recherche</li>
+    <li>Responsabilité de formation (directeur·trice de master)</li>
+    <li>Transfert vers l'industrie (R&amp;D, consulting)</li>
+    <li>Création d'une start-up ou d'une chaire industrielle</li>
+  </ul>
+  <p class="note">* Salaires indicatifs selon la grille de la Fonction publique (2024). Source : sup-recherche.org</p>
+</section>
+
+<!-- ══════════════════════════════════════════
+     BLOC 2 : Professeur·e des écoles
+     ══════════════════════════════════════════ -->
+
+<!-- Slide 7 — PE : présentation & compétences -->
+<section>
+  <h2 class="section-tag" style="color:var(--color-pe)">Professeur·e des écoles</h2>
+  <h2>Profil et compétences</h2>
+
+  <div class="cols">
+    <div class="col">
+      <h3>Le métier</h3>
+      <ul>
+        <li>Enseigne toutes les matières en école primaire (CP → CM2) ou maternelle</li>
+        <li>Accompagne chaque élève dans ses apprentissages fondamentaux</li>
+        <li>Élabore des séquences pédagogiques adaptées</li>
+        <li>Collabore avec les familles et les professionnel·les de l'éducation</li>
+        <li>Participe aux conseils de cycle et aux projets d'école</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>Compétences requises</h3>
+      <ul>
+        <li>Patience et bienveillance</li>
+        <li>Maîtrise de la didactique des disciplines fondamentales</li>
+        <li>Capacité à différencier les apprentissages</li>
+        <li>Gestion de classe et de la dynamique de groupe</li>
+        <li>Maîtrise du numérique éducatif</li>
+        <li>Sens de l'observation et de l'écoute</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Slide 8 — PE : parcours -->
+<section>
+  <h2 class="section-tag" style="color:var(--color-pe)">Professeur·e des écoles</h2>
+  <h2>Parcours type</h2>
+
+  <div class="diagram">
+    <img
+      src="https://img.plantuml.biz/plantuml/png/RT71IiGm40RWUvvYs1vKP0-xMhKNsRP9GMYXcBv0JBCbR3QHIOhW6_a4tlN5R5CF5II7dp3Va1boy45W6C-6-9EshmB56Lw4F0teHjkNpZY4fChdin8vedlxBQPfkghqwYX64ofd0zVl2dPxGb398EnW56ngBPML2dZx19U5aDStLniG7cf8SaRlgjqQDy87XT0mLYquNN0puOnMHRN6fRFIZUYXV6vPPEKqUCRkip-C1p5eeL51otXaVDwF5lHXpLfqH-Mz6l7hKq7GOJHpKspe_dkUwlaIVS1fIUWllZ-aCqiBXOJkYrlA2AbXkts4XZGnIrB6v8J7x4WNavA3iltqBJy0"
+      alt="Parcours professeur·e des écoles"
+    />
+  </div>
+
+  <div class="box box-pe" style="margin-top:0.5em">
+    <strong>Concours CRPE :</strong> le concours externe est ouvert aux titulaires d'un master (Bac+5).
+    Le master MEEF (Métiers de l'Enseignement, de l'Éducation et de la Formation)
+    prépare directement à ce concours.
+    La licence SPI est une solide base pour la composante scientifique du cursus MEEF.
+  </div>
+</section>
+
+<!-- Slide 9 — PE : journée type -->
+<section>
+  <h2 class="section-tag" style="color:var(--color-pe)">Professeur·e des écoles</h2>
+  <h2>Une journée type</h2>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <span class="tl-time">07h45</span>
+      <span class="tl-text">Accueil des élèves, installation de la classe</span>
+    </div>
+    <div class="tl-item">
+      <span class="tl-time">08h30</span>
+      <span class="tl-text">Séance de français (lecture, écriture, grammaire)</span>
+    </div>
+    <div class="tl-item">
+      <span class="tl-time">10h30</span>
+      <span class="tl-text">Séance de mathématiques (numération, problèmes)</span>
+    </div>
+    <div class="tl-item">
+      <span class="tl-time">12h00</span>
+      <span class="tl-text">Pause méridienne · surveillance</span>
+    </div>
+    <div class="tl-item">
+      <span class="tl-time">13h30</span>
+      <span class="tl-text">Sciences / histoire-géographie / arts — séquence expérimentale</span>
+    </div>
+    <div class="tl-item">
+      <span class="tl-time">15h30</span>
+      <span class="tl-text">Fin des cours · aide aux devoirs ou réunion de cycle</span>
+    </div>
+    <div class="tl-item">
+      <span class="tl-time">16h30</span>
+      <span class="tl-text">Préparation des séances du lendemain, corrections</span>
+    </div>
+  </div>
+
+  <div class="cols" style="margin-top:0.4em">
+    <div class="col">
+      <div class="box box-pos">
+        <strong>✔ Points forts</strong><br/>
+        Relation de confiance avec les élèves · Travail d'équipe · Stabilité de fonctionnaire
+      </div>
+    </div>
+    <div class="col">
+      <div class="box box-neg">
+        <strong>✖ Points faibles</strong><br/>
+        Charge préparatoire hors classe · Gestion des comportements difficiles · Mutations
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Slide 10 — PE : rémunération & évolutions -->
+<section>
+  <h2 class="section-tag" style="color:var(--color-pe)">Professeur·e des écoles</h2>
+  <h2>Rémunération &amp; évolutions</h2>
+
+  <table class="salary-table">
+    <thead>
+      <tr>
+        <th>Échelon</th>
+        <th>Salaire net mensuel</th>
+        <th>Ancienneté approximative</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Stagiaire (1re année)</td>
+        <td>≈ 1 900 €</td>
+        <td>Année de stage INSPE</td>
+      </tr>
+      <tr>
+        <td>Classe normale (débutant·e)</td>
+        <td>2 100 – 2 400 €</td>
+        <td>Échelons 1 à 6</td>
+      </tr>
+      <tr>
+        <td>Hors classe / classe exceptionnelle</td>
+        <td>2 600 – 3 200 €</td>
+        <td>Après 10–15 ans d'ancienneté</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 style="margin-top:0.6em">Évolutions possibles</h3>
+  <ul>
+    <li>Directeur·trice d'école (sans classe ou avec classe)</li>
+    <li>Conseiller·ère pédagogique de circonscription</li>
+    <li>Formateur·trice INSPE ou de terrain</li>
+    <li>Inspecteur·trice de l'Éducation nationale (IEN) par concours</li>
+    <li>Passage au corps des professeur·es du secondaire (CAPES, agrégation)</li>
+  </ul>
+  <p class="note">* Salaires nets indicatifs (grille MEN 2024, PPCR inclus). Source : education.gouv.fr</p>
+</section>
+
+<!-- ══════════════════════════════════════════
+     BLOC 3 : Ingénieur·e pédagogique
+     ══════════════════════════════════════════ -->
+
+<!-- Slide 11 — IP : présentation & compétences -->
+<section>
+  <h2 class="section-tag" style="color:var(--color-ip)">Ingénieur·e pédagogique</h2>
+  <h2>Profil et compétences</h2>
+
+  <div class="cols">
+    <div class="col">
+      <h3>Le métier</h3>
+      <ul>
+        <li>Conçoit des dispositifs de formation (présentiel, distanciel, hybride)</li>
+        <li>Crée des ressources numériques : modules e-learning, vidéos, quiz</li>
+        <li>Accompagne les formateur·trices dans leurs pratiques pédagogiques</li>
+        <li>Pilote des projets de transformation numérique des organismes de formation</li>
+        <li>Mesure l'efficacité des formations (analyse de l'impact)</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>Compétences requises</h3>
+      <ul>
+        <li>Maîtrise des LMS (Moodle, Canvas, 360Learning…)</li>
+        <li>Connaissance des sciences de l'apprentissage (cognitivisme, socioconstructivisme)</li>
+        <li>Outils auteurs (Articulate Storyline, Rise, H5P)</li>
+        <li>Gestion de projet agile</li>
+        <li>Communication et travail en transversalité</li>
+        <li>Analyse des besoins et ingénierie de la formation</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Slide 12 — IP : domaines et outils (diagramme) -->
+<section>
+  <h2 class="section-tag" style="color:var(--color-ip)">Ingénieur·e pédagogique</h2>
+  <h2>Domaines d'action</h2>
+
+  <div class="diagram">
+    <img
+      src="https://img.plantuml.biz/plantuml/png/LP5DRi8m48NtFeK5ctQ1L50fPLDXI8oGMWa9bcpSP30koTZr3vLwWnw54tHVBbOdQQeWRvury_dD6y-S5zQ7iY3kgD08AqhwAhAZj3fWlj25jhJFMNKw7SnQ_V5N78_7dKeEUn4AppNwZVe4EXmHKi3UKw-fLVBWQQuiP5vf9AGI0cK1jBT2UJcZWc1_lc67vdBEXTHIlGVeKU7eQatxB4qU-F0AMsZCm5IlxJ07kjUs5DNDrT22HsYQy3dlCbl83XXdbmhS3gDHo29p0aTldbysjpMvJMFgQJgPNf6NhvCeWcZj71N6M42ld1CI6i-KLVjAvibZbro2-n_IMFq6lcvUnbJ9Q7wVfDrcbcMwD48YbF7nngb95jVJk31UkqpO7I5nDOF1KmpRgctQgfIrQhbk5UDa1fZ7B_y5"
+      alt="Domaines d'action de l'ingénieur·e pédagogique"
+    />
+  </div>
+
+  <div class="box box-ip" style="margin-top:0.4em; font-size:0.78em">
+    <strong>Secteurs d'emploi :</strong>
+    universités et grandes écoles · centres de formation professionnelle · entreprises du CAC40 ·
+    éditeurs de logiciels éducatifs · organismes publics (CNAM, AFPA, Pôle emploi…)
+  </div>
+</section>
+
+<!-- Slide 13 — IP : journée type -->
+<section>
+  <h2 class="section-tag" style="color:var(--color-ip)">Ingénieur·e pédagogique</h2>
+  <h2>Une journée type</h2>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <span class="tl-time">09h00</span>
+      <span class="tl-text">Réunion de lancement avec un commanditaire pour recueillir les besoins en formation</span>
+    </div>
+    <div class="tl-item">
+      <span class="tl-time">10h30</span>
+      <span class="tl-text">Scénarisation d'un module e-learning sur Articulate Storyline</span>
+    </div>
+    <div class="tl-item">
+      <span class="tl-time">12h30</span>
+      <span class="tl-text">Déjeuner</span>
+    </div>
+    <div class="tl-item">
+      <span class="tl-time">14h00</span>
+      <span class="tl-text">Accompagnement d'un formateur dans la transformation de son cours en format hybride</span>
+    </div>
+    <div class="tl-item">
+      <span class="tl-time">15h30</span>
+      <span class="tl-text">Mise en ligne des ressources sur le LMS, tests d'accessibilité</span>
+    </div>
+    <div class="tl-item">
+      <span class="tl-time">17h00</span>
+      <span class="tl-text">Analyse des statistiques d'apprentissage de la dernière cohorte</span>
+    </div>
+  </div>
+
+  <div class="cols" style="margin-top:0.4em">
+    <div class="col">
+      <div class="box box-pos">
+        <strong>✔ Points forts</strong><br/>
+        Travail créatif · Diversité des contextes · Impact direct sur les formations
+      </div>
+    </div>
+    <div class="col">
+      <div class="box box-neg">
+        <strong>✖ Points faibles</strong><br/>
+        Métier peu connu · Périmètre parfois flou · Dépendance aux choix technologiques
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Slide 14 — IP : rémunération & évolutions -->
+<section>
+  <h2 class="section-tag" style="color:var(--color-ip)">Ingénieur·e pédagogique</h2>
+  <h2>Rémunération &amp; évolutions</h2>
+
+  <table class="salary-table">
+    <thead>
+      <tr>
+        <th>Profil</th>
+        <th>Salaire brut annuel</th>
+        <th>Secteur</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Débutant·e (0–3 ans)</td>
+        <td>28 000 – 35 000 €</td>
+        <td>Public ou privé</td>
+      </tr>
+      <tr>
+        <td>Confirmé·e (3–8 ans)</td>
+        <td>35 000 – 48 000 €</td>
+        <td>Entreprise / ESN</td>
+      </tr>
+      <tr>
+        <td>Senior / Chef·fe de projet</td>
+        <td>48 000 – 65 000 €</td>
+        <td>Grand groupe ou conseil</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 style="margin-top:0.6em">Évolutions possibles</h3>
+  <ul>
+    <li>Responsable pédagogique ou directeur·trice de formation</li>
+    <li>Consultant·e en transformation digitale de la formation (LXD)</li>
+    <li>Chercheur·euse en sciences de l'éducation ou technologie éducative</li>
+    <li>Création d'un organisme de formation ou d'une EdTech</li>
+  </ul>
+  <p class="note">* Fourchettes indicatives (France, 2024). Sources : APEC, Glassdoor, enquêtes IFéa/FFFOD.</p>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     Slide 15 — Comparaison & conclusion
+     ═══════════════════════════════════════════════════════ -->
+<section>
+  <h2>Synthèse comparative</h2>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th></th>
+        <th style="color:var(--color-ec)">Enseignant·e-chercheur·euse</th>
+        <th style="color:var(--color-pe)">Professeur·e des écoles</th>
+        <th style="color:var(--color-ip)">Ingénieur·e pédagogique</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Niveau requis</strong></td>
+        <td>Bac+8 (Doctorat)</td>
+        <td>Bac+5 (Master MEEF)</td>
+        <td>Bac+5 (Master spécialisé)</td>
+      </tr>
+      <tr>
+        <td><strong>Statut</strong></td>
+        <td>Fonctionnaire d'État</td>
+        <td>Fonctionnaire d'État</td>
+        <td>Salarié·e (public ou privé)</td>
+      </tr>
+      <tr>
+        <td><strong>Concours</strong></td>
+        <td>Qualification CNU puis concours local</td>
+        <td>CRPE (concours national)</td>
+        <td>Non (recrutement direct)</td>
+      </tr>
+      <tr>
+        <td><strong>Public</strong></td>
+        <td>Étudiant·es Bac+3 à Bac+8</td>
+        <td>Enfants 3–11 ans</td>
+        <td>Adultes (formation continue)</td>
+      </tr>
+      <tr>
+        <td><strong>Lien avec SPI</strong></td>
+        <td>Direct — thèse dans le domaine</td>
+        <td>Indirect — atout scientifique</td>
+        <td>Complémentaire — ingénierie + pédagogie</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="box" style="margin-top:0.7em; font-size:0.78em; border-left-color:#999; background:#f5f5f5;">
+    <strong>À retenir :</strong> la licence SPI ouvre trois voies différentes vers des métiers d'enseignement et de formation.
+    Chacune valorise à sa manière les compétences analytiques et techniques acquises en SPI.
+  </div>
+</section>
+
+</div><!-- /.slides -->
+</div><!-- /.reveal -->
+
+<!-- Reveal.js scripts (jsDelivr) -->
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    progress: true,
+    transition: 'slide',
+    plugins: [ RevealNotes, RevealHighlight ]
+  });
+</script>
+</body>
+</html>

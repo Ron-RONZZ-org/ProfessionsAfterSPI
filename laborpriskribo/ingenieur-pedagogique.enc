@@ -1,0 +1,60 @@
+terminologio.eo = "Pedagogia Inĝeniero(ino)"
+
+difino.eo = """
+## Superrigardo
+
+- Desegnas kaj kreas formadajn dispozitivojn (ĉeesta, malĉeesta, hibrida)
+- Produktas ciferecajn lernadrimedojn: e-lernado-moduloj, videoj, interretajn kursojn
+- Akompanas formistojn en la plibonigo de siaj pedagogiaj praktikoj
+- Mezuras la efikecon de la formadoj per analizo de datumoj
+- Laboras en universitatoj, entreprisoj, publika administrado aŭ EdTech-oj
+
+## Necesaj kapabloj
+
+- Majstrado de LMS-platformoj (Moodle, Canvas, 360Learning, Blackboard ktp.)
+- Kono de la sciencoj de la lernado (kognitivismo, socikonstruktivismo, andragogiko)
+- Uzado de aŭtora programaro (Articulate Storyline, Rise, H5P, Adobe Captivate)
+- Projekta administrado (agila metodaro, SCRUM)
+- Komunika kapableco kaj transversa kunlaboro
+- Analizo de lernaj bezonoj kaj inĝenierio de la formado
+
+## Ĉiutaga tago
+
+- Bezonan-kolektan kunveno kun komandistoj aŭ entreprisaj menedĝeroj
+- Scenarizada laboro por nova e-lernado-modulo
+- Akompanado de formisto por transformi sian kurson al hibrida formato
+- Metado de rimedoj sur la LMS kaj testado de alireblo
+- Statistika analizo de lernadaj datumoj (farendaj kvantoj, lernresultoj)
+- Koodinado kun la teamo pri cifereca transformo de edukado
+
+## Kariera vojo
+
+- Licence SPI (bac+3)
+- Master specialigita en cifereca edukado aŭ inĝenierio de formado (bac+5)
+  - ekz.: Master FOAD, Master Ingénierie de la Formation, Master EdTech
+- Rekrutado rekte en entrepriso, universitato aŭ formada organismo
+- Eblaj evoluoj:
+  - Respondeca pri formado aŭ Direktoro/Direktrino de formado
+  - Konsultisto en cifereca transformo de edukado (LXD — Learning Experience Design)
+  - Esplorado en edukaj sciencoj aŭ edukteknologio
+  - Fondado de EdTech-entrepriso aŭ formada organismo
+
+## Salajro (Francio, 2024)
+
+- Komencanto (0–3 jaroj): 28 000 – 35 000 € brute/jaro
+- Spertulo (3–8 jaroj): 35 000 – 48 000 € brute/jaro
+- Supra rango / Ĉefprojektisto: 48 000 – 65 000 € brute/jaro
+
+## Fortoj kaj malfortoj
+
+- Fortoj: kreiva laboro, diversaj kuntekstoj, rekta efiko sur la formadoj
+- Malfortoj: malmulte konata profesio, neklara delimitado, dependeco de teknologiaj elektoj
+"""
+
+fonto = [
+  {titolo="Ingénieur pédagogique — fiche métier", autoro="APEC", jaro=2024, tipo="retejoj", ligilo="https://corporate.apec.fr/home/nos-etudes-et-recherches/toutes-nos-etudes/les-etudes-des-metiers/lingenieur-pedagogique.html"},
+  {titolo="Référentiel de compétences des ingénieurs pédagogiques", autoro="IFéa — Institut de Formation des Éducateurs et Animateurs", jaro=2022, tipo="raportoj", ligilo="https://www.ifea.fr"},
+  {titolo="Panorama de la formation professionnelle en France", autoro="DARES", jaro=2023, tipo="raportoj", ligilo="https://dares.travail-emploi.gouv.fr/"},
+  {titolo="Learning Experience Design — pratiques et tendances", autoro="FFFOD", jaro=2023, tipo="retejoj", ligilo="https://www.fffod.org/"},
+  {titolo="Salaires des ingénieurs pédagogiques", autoro="Glassdoor France", jaro=2024, tipo="retejoj", ligilo="https://www.glassdoor.fr/Salaires/ing%C3%A9nieur-p%C3%A9dagogique-salaire-SRCH_KO0,22.htm"}
+].
